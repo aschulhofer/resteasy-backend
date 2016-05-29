@@ -1,2 +1,3 @@
-#### Resteasy Backend
+#### JAX-RS Backend
+RESTEasy  
 Widlfly 10
