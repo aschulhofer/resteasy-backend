@@ -15,13 +15,11 @@ public class HelloWorldRestService {
 	@Produces("application/json")
 	public Response getHelloWorld() {
 		return Response
-				.ok(new RestMessage("Hello World - cross origin"))
-				.header("Access-Control-Allow-Origin", "*")
-	            .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
-	            .header("Access-Control-Allow-Credentials", "true")
-	            .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
-	            .header("Access-Control-Max-Age", "1209600")
-				.build();
+				.ok(new RestMessage("Hello World - cross origin")).header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
+				.header("Access-Control-Allow-Credentials", "true")
+				.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
+				.header("Access-Control-Max-Age", "1209600").build();
 	}
-	
+
 }
