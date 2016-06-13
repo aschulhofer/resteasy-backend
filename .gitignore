@@ -2,6 +2,7 @@
 
 .project
 .classpath
+nb-configuration.xml
 
 target/
 WebContent/
