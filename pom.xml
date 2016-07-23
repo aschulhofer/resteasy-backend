@@ -15,15 +15,15 @@
 
 		<!-- Test dependency versions -->
 		<junit.version>4.11</junit.version>
-		
+
 		<!-- JBoss dependency versions, dependency versions on Wildfly10 -->
-        <wildfly.maven.plugin.version>1.0.2.Final</wildfly.maven.plugin.version>
+		<wildfly.maven.plugin.version>1.0.2.Final</wildfly.maven.plugin.version>
 		<resteasy.version>3.0.14.Final</resteasy.version>
 		<hibernate.version>5.0.1.Final</hibernate.version>
 
-        <!-- Other plug-in versions -->
-        <war.plugin.verion>2.1.1</war.plugin.verion>
-		
+		<!-- Other plug-in versions -->
+		<war.plugin.verion>2.1.1</war.plugin.verion>
+
 	</properties>
 
 	<dependencyManagement>
@@ -48,14 +48,14 @@
 				<version>2.0</version>
 				<scope>provided</scope>
 			</dependency>
-			
+
 			<dependency>
-			    <groupId>javax.persistence</groupId>
-			    <artifactId>persistence-api</artifactId>
-			    <version>1.0.2</version>
-			    <scope>provided</scope>
+				<groupId>javax.persistence</groupId>
+				<artifactId>persistence-api</artifactId>
+				<version>1.0.2</version>
+				<scope>provided</scope>
 			</dependency>
-			
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -69,15 +69,15 @@
 		</dependency>
 
 		<dependency>
-		    <groupId>javax.persistence</groupId>
-		    <artifactId>persistence-api</artifactId>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -104,24 +104,24 @@
 						<target>${java.target.version}</target>
 					</configuration>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-	                <artifactId>maven-war-plugin</artifactId>
-	                <version>${war.plugin.verion}</version>
-	                <configuration>
-               			<!-- Java EE doesn't require web.xml -->
-	                    <failOnMissingWebXml>false</failOnMissingWebXml>
-	                </configuration>
-	            </plugin>
-	            
-	            <!-- WildFly plug-in to deploy the WAR -->
-	            <plugin>
-	                <groupId>org.wildfly.plugins</groupId>
-	                <artifactId>wildfly-maven-plugin</artifactId>
-	                <version>${wildfly.maven.plugin.version}</version>
-	            </plugin>
-				
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${war.plugin.verion}</version>
+					<configuration>
+						<!-- Java EE doesn't require web.xml -->
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+
+				<!-- WildFly plug-in to deploy the WAR -->
+				<plugin>
+					<groupId>org.wildfly.plugins</groupId>
+					<artifactId>wildfly-maven-plugin</artifactId>
+					<version>${wildfly.maven.plugin.version}</version>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
 
@@ -134,14 +134,14 @@
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-            </plugin>
-            
-            <!-- WildFly plug-in to deploy the WAR -->
-            <plugin>
-                <groupId>org.wildfly.plugins</groupId>
-                <artifactId>wildfly-maven-plugin</artifactId>
-            </plugin>
+				<artifactId>maven-war-plugin</artifactId>
+			</plugin>
+
+			<!-- WildFly plug-in to deploy the WAR -->
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+			</plugin>
 
 		</plugins>
 
