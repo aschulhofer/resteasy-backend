@@ -11,4 +11,14 @@
 		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
 
+	<filter-mapping>
+		<filter-name>at.woodstick.service.CORSOptionsFilter</filter-name>
+		<url-pattern>/api/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>at.woodstick.service.AuthenticationFilter</filter-name>
+		<url-pattern>/api/*</url-pattern>
+	</filter-mapping>
+
 </web-app>
