@@ -154,6 +154,7 @@ public class AuthenticationEndpoint {
 		responseData.put("jwt", compactJws);
 		responseData.put("key", key);
 		responseData.put("username", username);
+		responseData.put("roles", roles);
 
 		String authorizationValue = "Bearer " + compactJws;
 		
