@@ -15,6 +15,9 @@
 
 		<!-- Test dependency versions -->
 		<junit.version>4.11</junit.version>
+		
+		<!-- Logging dependency versions -->
+		<slf4j-api.version>1.7.21</slf4j-api.version>
 
 		<!-- JBoss dependency versions, dependency versions on Wildfly10 -->
 		<wildfly.maven.plugin.version>1.0.2.Final</wildfly.maven.plugin.version>
@@ -56,6 +59,12 @@
 				<scope>provided</scope>
 			</dependency>
 
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j-api.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -86,6 +95,11 @@
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
 		</dependency>
 	</dependencies>
 
